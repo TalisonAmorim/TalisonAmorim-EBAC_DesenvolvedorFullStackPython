@@ -1,6 +1,6 @@
 # Lista de Tarefas com jQuery
 
-Este é um projeto desenvolvido como parte do curso de Web Full Stack Python da EBAC. O objetivo é criar uma aplicação de lista de tarefas utilizando HTML, CSS, JavaScript e jQuery.
+Este é um projeto desenvolvido como parte do curso de [Desenvolvedor Full Stack Python da EBAC](https://ebaconline.com.br/full-stack-python). O objetivo é criar uma aplicação de lista de tarefas utilizando HTML, CSS, JavaScript e jQuery.
 
 ## Requisitos
 
