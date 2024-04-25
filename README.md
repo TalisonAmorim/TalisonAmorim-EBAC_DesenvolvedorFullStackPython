@@ -18,3 +18,6 @@ O exercício consiste em:
 - `style.css`: Arquivo de estilos CSS para estilizar a aplicação.
 - `script.js`: Arquivo JavaScript contendo a lógica do aplicativo, incluindo o uso do jQuery.
 - `README.md`: Documentação do projeto.
+- `imagens`: Pasta contendo as Imagens do projeto
+
+
