@@ -47,6 +47,7 @@ header img {
   float: left; 
   height: 60px; 
   margin-right: 20px; 
+  border-radius: 30px;
 }
 
 main{
