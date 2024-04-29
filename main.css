@@ -141,9 +141,10 @@ background-color: transparent;
   cursor: pointer;
   width: 20%;
   color: red;
+  text-decoration: none !important;
 }
 
 .delete-btn:hover {
   background-color: #cc0000;
-  color: #d0d0d0; /* Cor de fundo vermelha mais escura ao passar o mouse */
+  color: #d0d0d0; 
 }

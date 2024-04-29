@@ -6,12 +6,15 @@ $(document).ready(function() {
     $('#task-list').append('<li><input type="checkbox" class="task-checkbox">' + taskCount + '. ' + taskName + '<button class="delete-btn">&#128465;</button></li>');
     $('#task-input').val('');
   });
-// botão para excluir tarefa
-  $('#task-list').on('click', '.delete-btn', function() {
-    $(this).parent().remove();
+
+  $('#task-list').on('click', '.task-checkbox', function(e) {
+    e.stopPropagation(); 
+    var $taskItem = $(this).parent();
+    $taskItem.toggleClass('completed', $(this).prop('checked'));
   });
-//ajuste proposto pelo professor
-  $('#task-list').on('click', 'li', function() {
-    $(this).toggleClass('completed');
+
+  $('#task-list').on('click', '.delete-btn', function(e) {
+    e.stopPropagation(); 
+    $(this).parent().remove();
   });
 });
