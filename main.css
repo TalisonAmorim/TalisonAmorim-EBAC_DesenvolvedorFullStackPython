@@ -81,7 +81,6 @@ ul {
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   margin-top: 20px;
   color: #05082b;
@@ -89,6 +88,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px 0;
   text-align: center;
+  position: fixed;
 }
 
 footer .redes {
@@ -108,9 +108,13 @@ header #imagem{
 }
 
 #task-list li {
-  border-bottom: 1px solid #ccc; /* Adiciona uma borda na parte inferior de cada item da lista */
-  padding: 10px 0; /* Adiciona algum espaço interno para melhorar o visual */
+  border-bottom: 1px solid #ccc; 
+  padding: 10px 0; 
   padding-bottom: 0px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 0; 
 }
 
 #tarefas{
@@ -118,4 +122,28 @@ header #imagem{
   padding: 10px 20px;
   overflow: hidden;
   border-radius: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.delete-btn {
+background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%;
+  color: red;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+  color: #d0d0d0; /* Cor de fundo vermelha mais escura ao passar o mouse */
 }
