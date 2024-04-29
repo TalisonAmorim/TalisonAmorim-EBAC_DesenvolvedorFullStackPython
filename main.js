@@ -17,4 +17,5 @@ $(document).ready(function() {
     e.stopPropagation(); 
     $(this).parent().remove();
   });
+  
 });

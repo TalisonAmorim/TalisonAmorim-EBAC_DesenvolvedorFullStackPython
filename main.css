@@ -49,13 +49,16 @@ header img {
   margin-right: 20px; 
 }
 
+main{
+  min-height: 75vh;
+}
+
 .container {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   padding: 20px;
   margin: 50px auto;
   width: 80%;
-  max-width: 500px;
   text-align: center;
 }
 
@@ -88,7 +91,6 @@ footer {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px 0;
   text-align: center;
-  position: fixed;
 }
 
 footer .redes {
@@ -128,6 +130,10 @@ header #imagem{
   text-decoration: line-through;
 }
 
+.completed .delete-btn {
+  text-decoration: none !important;;
+}
+
 #task-list {
   list-style: none;
   padding: 0;
@@ -141,7 +147,6 @@ background-color: transparent;
   cursor: pointer;
   width: 20%;
   color: red;
-  text-decoration: none !important;
 }
 
 .delete-btn:hover {
