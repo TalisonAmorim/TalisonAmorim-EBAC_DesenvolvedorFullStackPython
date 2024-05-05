@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #05082b;
+    background-size: cover;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */
+    position: relative; /* Para o posicionamento do footer */
+  }
+  
+  header {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    overflow: hidden;
+  }
+  
+  header nav {
+    float: right; 
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin-left: 20px; 
+  }
+  
+  header nav ul li:first-child {
+    margin-left: 0; 
+  }
+  
+  header nav ul li a {
+    color: #05082b;;
+    text-decoration: none;
+    transition: color 0.3s; 
+  }
+  
+  header nav ul li a:hover {
+    color: #05082b7e; /* Define a cor quando o mouse estiver sobre o link */
+  }
+  
+  header img {
+    float: left; 
+    height: 60px; 
+    margin-right: 20px; 
+    border-radius: 30px;
+  }
+  
+  main{
+    min-height: 75vh;
+  }
+  
+  .container {
+    background-color: rgba(217, 219, 236, 0.622);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+  }
+  
+  footer {
+    bottom: 0;
+    margin-top: 20px;
+    color: #05082b;
+    width: 100%; 
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  footer .redes {
+    margin-bottom: 10px;
+  }
+  
+  footer .redes a {
+    margin-right: 10px;
+  }
+  
+  footer .redes a img {
+    width: 30px;
+    height: 30px;
+  }
