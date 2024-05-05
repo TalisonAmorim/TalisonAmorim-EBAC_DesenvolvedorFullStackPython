@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('./imagens/Fundo\ 1.jpeg');
+  background-color: #05082b;
   background-size: cover;
   min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */
   position: relative; /* Para o posicionamento do footer */
@@ -55,14 +55,12 @@ main{
 }
 
 .container {
-  background-color: rgba(10, 34, 246, 0.622);
+  background-color: rgba(217, 219, 236, 0.622);
   border-radius: 10px;
   padding: 20px;
   margin: 50px auto;
   width: 80%;
-  text-align: center;
 }
-
 
 footer {
   bottom: 0;
@@ -86,69 +84,3 @@ footer .redes a img {
   width: 30px;
   height: 30px;
 }
-
-/* Estilo para os inputs do formulário */
-#cadastroForm input[type="text"],
-#cadastroForm input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-/* Estilo para o botão do formulário */
-#cadastroForm button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: #05082b;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#cadastroForm button:hover {
-  background-color: #0ba215;;
-  color: #d0d0d0; 
-}
-
-/* Estilo para a tabela */
-#dadosTabela {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#dadosTabela th,
-#dadosTabela td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
-}
-
-#dadosTabela th {
-  background-color: #f2f2f2;
-}
-
-.excluir-btn {
-  background-color: transparent;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: red;
-  }
-  
-  .excluir-btn:hover {
-    background-color: #cc0000;
-    color: #d0d0d0; 
-  }
-
-  #about{
-    color: #fff;
-  }
-
-  #about a{
-    color: #ffffff;
-  }
