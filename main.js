@@ -1,21 +1,22 @@
 $(document).ready(function() {
-  $('#task-form').submit(function(e) {
+  // Aplicando máscaras aos campos do formulário
+  $('#inputTelefone').mask('(00) 00000-0000');
+
+  // Função para validar e enviar o formulário
+  $('#cadastroForm').submit(function(e) {
     e.preventDefault();
-    var taskName = $('#task-input').val();
-    var taskCount = $('#task-list li').length + 1; // Conta o número de tarefas e incrementa
-    $('#task-list').append('<li><input type="checkbox" class="task-checkbox">' + taskCount + '. ' + taskName + '<button class="delete-btn">&#128465;</button></li>');
-    $('#task-input').val('');
-  });
 
-  $('#task-list').on('click', '.task-checkbox', function(e) {
-    e.stopPropagation(); 
-    var $taskItem = $(this).parent();
-    $taskItem.toggleClass('completed', $(this).prop('checked'));
-  });
+    // Captura dos valores dos campos do formulário
+    var nome = $('#inputNome').val();
+    var email = $('#inputEmail').val();
+    var telefone = $('#inputTelefone').val();
 
-  $('#task-list').on('click', '.delete-btn', function(e) {
-    e.stopPropagation(); 
-    $(this).parent().remove();
+    // Validando se os campos estão preenchidos
+    if (nome && email && telefone) {
+      // Aqui você pode enviar os dados para o servidor ou fazer outras operações
+      alert('Formulário enviado com sucesso!');
+    } else {
+      alert('Por favor, preencha todos os campos do formulário.');
+    }
   });
-  
 });
