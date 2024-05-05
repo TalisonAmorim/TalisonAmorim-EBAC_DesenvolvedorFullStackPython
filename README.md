@@ -1,23 +1,15 @@
 # Formulário com Mascaras jQuery
 
-Este é um projeto desenvolvido como parte do curso de [Desenvolvedor Full Stack Python da EBAC](https://ebaconline.com.br/full-stack-python). O objetivo é:
-Adicionar o Bootstrap em uma página HTML utilizando a CDN
-Criar um formulário de cadastro que deverá conter os campos: nome, e-mail e telefone, e um botão para o envio
-Aplique as classes do Bootstrap nos elementos do formulário
+Este é um projeto desenvolvido como parte do curso de [Desenvolvedor Full Stack Python da EBAC](https://ebaconline.com.br/full-stack-python). O objetivo é criar um formulário de cadastro utilizando HTML, CSS, JavaScript e jQuery, com os campos: nome completo, e-mail, telefone, CPF, endereço completo e CEP, utilize o plugin jQuery Mask Plugin para aplicar máscara aos campos CPF, telefone e CEP
 
 ## Requisitos
 
 A entrega deste exercício consiste em:
 
-1. Adicionar o Bootstrap em uma página HTML utilizando a CDN;
-
-2. Nesta página HTML, crie um formulário de cadastro que deverá conter os campos: nome, e-mail e telefone, e um botão para o envio;
-
-3. Aplique as classes do Bootstrap nos elementos do formulário;
-
-4. Crie uma branch chamada exercicio_bootstrap no repositório do curso;
-
-5. Envie o link através da plataforma. 
+1. Crie um formulário de cadastro, este formulário deverá conter os campos: nome completo, e-mail, telefone, CPF, endereço completo e CEP;
+2. Utilize o plugin jQuery Mask Plugin para aplicar máscara aos campos CPF, telefone e CEP;
+3. Crie uma branch chamada exercicio_plugins_jquery no repositório do curso;
+4. Envie o link através da plataforma.
 
 ## Estrutura
 
