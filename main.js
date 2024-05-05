@@ -1,22 +1,24 @@
 $(document).ready(function() {
-  // Aplicando máscaras aos campos do formulário
-  $('#inputTelefone').mask('(00) 00000-0000');
+  // Aplicando máscaras aos campos
+  $('#telefone').mask('(00) 0000-0000');
 
-  // Função para validar e enviar o formulário
+  // Função para adicionar uma nova linha na tabela
   $('#cadastroForm').submit(function(e) {
     e.preventDefault();
 
     // Captura dos valores dos campos do formulário
-    var nome = $('#inputNome').val();
-    var email = $('#inputEmail').val();
-    var telefone = $('#inputTelefone').val();
+    var nomeCompleto = $('#nomeCompleto').val();
+    var email = $('#email').val();
+    var telefone = $('#telefone').val();
 
-    // Validando se os campos estão preenchidos
-    if (nome && email && telefone) {
-      // Aqui você pode enviar os dados para o servidor ou fazer outras operações
-      alert('Formulário enviado com sucesso!');
-    } else {
-      alert('Por favor, preencha todos os campos do formulário.');
-    }
+    // Adiciona os valores em uma nova linha na tabela
+    $('#dadosTabela').append('<tr>' +
+                             '<td>' + nomeCompleto + '</td>' +
+                             '<td>' + email + '</td>' +
+                             '<td>' + telefone + '</td>' +
+                             '</tr>');
+
+    // Limpa os campos do formulário após a submissão
+    $('#cadastroForm')[0].reset();
   });
 });
