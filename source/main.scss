@@ -2,82 +2,106 @@
 @use 'config/variaveis';
 @use 'sass:math';
 
-@mixin elementoForm ($margin: 16px){
-    padding: 8px;
-    display: block;
-    width: 100%;
-    margin-bottom: $margin;
+body {
+    background-color: variaveis.$corPrincipal;
 }
 
-@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px){
-    @return math.div($alvoEmPixel , $contextoEmPixel)+em;
+li {
+    list-style: none;
 }
 
-body{
-    background-color: #eee;
+.branding{
+    img{
+        border-radius: 50px;
+    }
 }
 
-.container{
+.container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
-header{
-    padding: 16px 0;
-    background-color: variaveis.$corPrincipal;
-    text-align: center;
-    color: #fff;
+
+header {
+    background-color: variaveis.$corDeFundo;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
 }
 
-.form-container{
-    height:calc(100vh - 70px);
+
+.menu {
     display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    max-width: 760px;
-
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+        a {
+            color: variaveis.$corfontesFuntoEscuro;
+            text-decoration: none;
+        }
+    }
     
+}
 
-    h2{
-        font-size: pixelParaEm(48px);
-        text-align: center;
+section {
+    padding: 56px 0;
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+}
+
+.product-item{
+    img {
+        width: 100%;
+        border-radius: 16px;
+    }
+} 
+
+.product-button {
+    display: block;
+    background-color: variaveis.$corSecundaria;
+    color: variaveis.$corfontesFuntoEscuro;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+    &:hover {
+        background-color: variaveis.$corSecundaria;
+    }
+}
+
+
+@media screen and (max-width: variaveis.$tablet) {
+    .container {
+        max-width: 80%;
     }
 
-    form{
-        width: 100%;
-        max-width: 480px;
-        margin-top: 40px;
-
-        label{
-            font-weight: bold;
-            cursor: pointer;
-        }
-        input {
-            @include elementoForm;
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid variaveis.$corPrincipal;
-        }
-        button{
-            @include elementoForm;
-            background-color: variaveis.$corSecundaria;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer; 
-            font-size: 18px;
-            font-weight:bold;
-            color: #fff;
-
-            &:hover {
-                background-color: darken(variaveis.$corSecundaria, 15%);
-            }
-        }
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
     }
 }
 
 @media screen and (max-width: variaveis.$mobile) {
-    .container {
-        max-width: 80%;
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
     }
 }
