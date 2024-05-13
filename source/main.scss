@@ -1,0 +1,38 @@
+$corprincipal: rgb(236, 236, 243);
+$corSecundaria: rgb(39, 39, 39);
+body{
+    background-color: $corprincipal;
+}
+
+header{
+    background-color: $corprincipal;
+//encapsulamento
+    h1 {
+        color: red;
+    }
+}
+
+// header h1{
+//     color:red;
+// }
+
+button {
+    padding: 16px;
+    background-color: $corSecundaria;
+    color: $corprincipal;
+    border-radius: 10%;
+
+    &:hover {
+        background-color: azure;
+        color: black;
+    }
+
+    &.sucesso{
+        background-color: green;
+        color: azure;
+        &:hover{
+            color: green;
+            background-color: azure;
+        }
+    }
+}

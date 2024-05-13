@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(236, 236, 243);
+}
+
+header {
+  background-color: rgb(236, 236, 243);
+}
+header h1 {
+  color: red;
+}
+
+button {
+  padding: 16px;
+  background-color: rgb(39, 39, 39);
+  color: rgb(236, 236, 243);
+  border-radius: 10%;
+}
+button:hover {
+  background-color: azure;
+  color: black;
+}
+button.sucesso {
+  background-color: green;
+  color: azure;
+}
+button.sucesso:hover {
+  color: green;
+  background-color: azure;
+}
+
+/*# sourceMappingURL=main.css.map */
