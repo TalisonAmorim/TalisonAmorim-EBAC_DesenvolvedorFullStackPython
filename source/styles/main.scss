@@ -1,5 +1,63 @@
 @use 'variaveis';
 
 body {
-    background-color: variaveis.$corPrincipal;
-}
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: variaveis.$corPrincipal; /* cor de fundo padrão */
+  }
+  
+  .background-image {
+    background-image: url('/source/images/bird-ga5d9ed257_1920.jpg'); /* substitua 'sua-imagem-de-fundo.jpg' pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form{
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    background-color: variaveis.$corPrincipal; /* fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px; /* bordas arredondadas */
+    text-align: center;
+  }
+  
+  .form-input {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: calc(100% - 16px); /* width ajustado para levar em conta o padding */
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px; /* bordas arredondadas */
+    border: 1px solid #ccc; /* adiciona uma borda para destacar o campo */
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color:variaveis.$corSecundaria;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* bordas arredondadas */
+  }
+  
+  button:hover {
+    background-color:variaveis.$corSecundariahover;
+  }
+  
+  #mensagem {
+    font-weight: bold;
+  }
+  
