@@ -1,92 +1,97 @@
-.marginBottom8 {
-  margin-bottom: 8px;
-}
+/* Define mixins para os comandos repetidos */
+/* Aplicar mixins no código LESS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
 }
 body {
-  background-color: #192a56;
-  color: #f5f6fa;
+  background-color: #f5f6fa;
 }
 li {
   list-style: none;
 }
 .container {
-  max-width: 960px;
+  max-width: 1024px;
   width: 100%;
+  margin: 0;
   margin: 0 auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
     max-width: 80%;
   }
 }
-@media (max-width: 767px) {
-  .container {
-    max-width: 70%;
-  }
-}
 header {
-  padding-bottom: 24px;
+  background-color: #182C61;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
-header .profile-avatar {
-  display: block;
-  margin: 0 auto 24px;
-  border-radius: 50%;
-  width: 96px;
-}
-.profile-bio {
-  text-align: center;
-}
-.profile-bio-name {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-.profile-bio-subtitle {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-.profile-bio-description {
-  font-size: 14px;
-  opacity: 0.7;
-}
-.social-links {
+header .container {
   display: flex;
   justify-content: space-between;
-  max-width: 240px;
-  width: 100%;
-  margin: 0 auto;
+  align-items: center;
+  padding: 0;
+  padding: 16px 0;
 }
-.social-links img {
-  transition: all ease 0.3s;
+.menu {
+  display: flex;
 }
-.social-links img:hover {
-  transform: scale(1.3);
-}
-.projects-list {
-  margin-top: 32px;
-}
-.projects-list-item a {
-  text-decoration: none;
-  background-color: #0097e6;
-  display: block;
-  padding: 16px 20px;
-  margin-bottom: 16px;
-  text-align: center;
-  color: #f5f6fa;
+.menu li {
   font-weight: bold;
-  border-radius: 30px;
-  border: 2px solid #0097e6;
+  margin-left: 24px;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+section {
+  padding: 56px 0;
+}
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+@media (max-width: 767px) {
+  .products {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .products-item {
+    margin-bottom: 32px;
+  }
+}
+.products-item img {
+  width: 100%;
+  border-radius: 16px;
+}
+.products-button {
+  display: block;
+  background-color: #44bd32;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+  border: 2px solid #44bd32;
   transition: all ease 0.5s;
 }
-.projects-list-item a:hover {
-  color: #0097e6;
+.products-button:hover {
+  color: #44bd32;
   background-color: transparent;
 }

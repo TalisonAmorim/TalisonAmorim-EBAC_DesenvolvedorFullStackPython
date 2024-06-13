@@ -4,105 +4,127 @@
 @breakpointMobile:~"(max-width: 767px)";
 @breakpointTablet:~"(min-width: 768px) and (max-width: 1023px)";
 
-.marginBottom8 { //mixin
-    margin-bottom: 8px;
-}
-
-*{
+/* Define mixins para os comandos repetidos */
+.margin-zero() {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:"Roboto", sans-serif;
-}
-body {
-    background-color: #colors[backgroundColor];
-    color: #colors[textColor];
 }
 
-li{
+.padding-zero() {
+    padding: 0;
+}
+
+.display-flex() {
+    display: flex;
+}
+
+.text-decoration-none() {
+    text-decoration: none;
+}
+
+/* Aplicar mixins no código LESS */
+* {
+    .margin-zero();
+    .padding-zero();
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #colorsBody[backgroundColor];
+}
+
+li {
     list-style: none;
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1024px;
     width: 100%;
+    .margin-zero(); 
     margin: 0 auto;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    @media @breakpointTablet{
+    @media @breakpointTablet {
         max-width: 80%;
     }
-    @media @breakpointMobile {
-        max-width: 70%;
+}
+
+header {
+    background-color: #colorsHeder[backgroundColor];
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        .display-flex();
+        justify-content: space-between;
+        align-items: center;
+        .padding-zero();
+        padding: 16px 0;
     }
 }
 
-header{
-    padding-bottom: 24px;
+.menu {
+    .display-flex();
 
-    .profile-avatar{
-        display: block;
-        margin: 0 auto 24px;
-        border-radius: 50%;
-        width: 96px;
-    }
-}
+    li {
+        font-weight: bold;
+        margin-left: 24px;
 
-.profile-bio{
-    text-align: center;
-    &-name{
-        font-size: 16px;
-        .marginBottom8();
-    }
-
-    &-subtitle{
-        font-size: 14px;
-        .marginBottom8();
-    }
-
-    &-description{
-        font-size: 14px;
-        opacity: .7;
-    }
-}
-
-.social-links{
-    display: flex;
-    justify-content: space-between;
-    max-width: 240px;
-    width: 100%;
-    margin: 0 auto;
-        img{
-            transition:  all ease .3s;
-            &:hover{
-                transform: scale(1.3);
-            }
-    }
-}
-
-.projects-list{
-    margin-top: 32px;
-    &-item{
         a {
-            text-decoration: none;
-            background-color: #colors[buttonColor];
-            display: block;
-            padding: 16px 20px;
-            margin-bottom: 16px;
-            text-align: center;
-            color: #colors[textColor];
-            font-weight: bold;
-            border-radius: 30px;
-            border: 2px solid #colors[buttonColor];
-            transition: all ease .5s;
+            color: #colorsHeder[textColor];
+            .text-decoration-none();
+        }
+    }
+}
 
-            &:hover {
-                color: #colors[buttonColor];
-                background-color: transparent;
-            }
+section {
+    padding: 56px 0;
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+
+    @media @breakpointTablet {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+
+    @media @breakpointMobile {
+        display: block;
+    }
+
+    &-item {
+        @media @breakpointMobile {
+            margin-bottom: 32px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 16px;
+        }
+    }
+
+    &-button {
+        display: block;
+        background-color: #colorsBody[buttonColor];
+        color: #colorsHeder[textColor];
+        text-align: center;
+        .padding-zero();
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        .text-decoration-none();
+        border: 2px solid #colorsBody[buttonColor];
+        transition: all ease .5s;
+
+        &:hover {
+            color: #colorsBody[buttonColor];
+            background-color: transparent;
         }
     }
 }
